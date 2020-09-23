@@ -1,0 +1,97 @@
+module SCTP
+{
+
+// Test port in simple mode
+// All config from the config file
+// SCTP Server:  ncat -l --sctp -vv -p 5202
+
+
+
+import from SCTPasp_Types all;
+import from SCTPasp_PortType all;
+
+type component SCTP_CT {
+
+  port SCTPasp_PT        SCTP_PCO;
+  
+}
+
+type component System_CT
+{
+   port SCTPasp_PT SCTP_PCO;
+ 
+}
+
+
+
+template  ASP_SCTP_Close  t_ASP_SCTP_Close(template integer p_clientId) := {client_id:=p_clientId};
+
+template ASP_SCTP t_ASP_SCTP(charstring p_s) :=
+{
+  client_id := omit,
+  sinfo_stream := 0,
+  sinfo_ppid := 0,
+  data := char2oct(p_s) 
+}
+
+
+//******************************************************
+testcase tc_sctp0() runs on SCTP_CT system System_CT  {
+//******************************************************
+  timer t0:=1.0;
+ 
+  map(self:SCTP_PCO, system:SCTP_PCO);
+
+var  ASP_SCTP_Connect vl_connect0 :=
+{
+  peer_hostname:=omit,
+  peer_portnumber:=omit
+}
+
+//Connect
+SCTP_PCO.send(vl_connect0) ;
+  t0.start;
+  alt 
+  {   
+    []SCTP_PCO.receive(ASP_SCTP_RESULT:?) { }
+    []t0.timeout { }
+  }
+
+//Send some payload
+for (var integer i:=0;i<=9;i:=i+1)  { 
+var charstring vl_s:=int2str(i)&"  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ"&"\n\r";
+
+SCTP_PCO.send(t_ASP_SCTP(vl_s)) ;  
+}
+ 
+SCTP_PCO.send(t_ASP_SCTP("Client waiting for 1 second"&"\n\r")) ; 
+ 
+ t0.start;
+ t0.timeout;
+
+SCTP_PCO.send(t_ASP_SCTP("Client sending close"&"\n\r")) ;
+  
+ 
+  SCTP_PCO.send(t_ASP_SCTP_Close(omit)) 
+  t0.start;
+  alt 
+  {
+    []SCTP_PCO.receive {}
+    []t0.timeout {}
+  }
+
+
+unmap(self:SCTP_PCO, system:SCTP_PCO);
+
+  all component.kill;
+}
+
+//******************************************************
+control
+//******************************************************
+
+{
+  execute( tc_sctp0());
+}//endcontrol
+
+}//endmodule

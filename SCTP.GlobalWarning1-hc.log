@@ -1,0 +1,22 @@
+16:51:32.054821 - TTCN-3 Host Controller started on GlobalWarning1. Version: CRL 113 200/6 R6B.
+16:51:32.054862 - TTCN Logger v2.2 options: TimeStampFormat:=Time; LogEntityName:=No; LogEventTypes:=No; SourceInfoFormat:=Single; *.FileMask:=LOG_ALL | MATCHING | DEBUG; *.ConsoleMask:=ERROR | USER; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+16:51:32.055226 - The address of MC was set to GlobalWarning1[127.0.1.1]:0.
+16:51:32.058783 - The local IP address of the control connection to MC is 127.0.0.1.
+16:51:32.058800 - Connected to MC.
+16:51:32.058818 - This host supports UNIX domain sockets for local communication.
+16:51:32.059433 - Processing configuration data received from MC.
+16:51:32.059907 - Initializing module PreGenRecordOf.
+16:51:32.059934 - Initialization of module PreGenRecordOf finished.
+16:51:32.059960 - Initializing module SCTP.
+16:51:32.059985 SCTP.ttcn:0 Initializing module SCTPasp_PortType.
+16:51:32.060013 SCTPasp_PortType.ttcn:0 Initializing module SCTPasp_Types.
+16:51:32.060045 SCTPasp_PortType.ttcn:0 Initialization of module SCTPasp_Types finished.
+16:51:32.060072 SCTP.ttcn:0 Initialization of module SCTPasp_PortType finished.
+16:51:32.060099 - Initialization of module SCTP finished.
+16:51:32.060124 - Initializing module TitanLoggerApi.
+16:51:32.060148 - Initialization of module TitanLoggerApi finished.
+16:51:32.060255 - Configuration data was processed successfully.
+16:51:32.060512 - MTC was created. Process id: 4415.
+16:51:34.069523 - Exit was requested from MC. Terminating HC.
+16:51:34.069750 - Disconnected from MC.
+16:51:34.069825 - TTCN-3 Host Controller finished.

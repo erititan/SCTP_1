@@ -1,0 +1,105 @@
+16:51:32.060884 - TTCN-3 Main Test Component started on GlobalWarning1. Version: CRL 113 200/6 R6B.
+16:51:32.060996 - TTCN Logger v2.2 options: TimeStampFormat:=Time; LogEntityName:=No; LogEventTypes:=No; SourceInfoFormat:=Single; *.FileMask:=LOG_ALL | MATCHING | DEBUG; *.ConsoleMask:=ERROR | USER; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+16:51:32.061175 - Connected to MC.
+16:51:32.061647 - Executing control part of module SCTP.
+16:51:32.061691 SCTP.ttcn:90 Execution of control part in module SCTP started.
+16:51:32.061764 SCTP.ttcn:39 Test case tc_sctp0 started.
+16:51:32.061814 SCTP.ttcn:39 Initializing variables, timers and ports of component type SCTP.SCTP_CT inside testcase tc_sctp0.
+16:51:32.061864 SCTP.ttcn:39 Port SCTP_PCO was started.
+16:51:32.061899 SCTP.ttcn:39 Component type SCTP.SCTP_CT was initialized.
+16:51:32.061928 SCTP.ttcn:43 Mapping port mtc:SCTP_PCO to system:SCTP_PCO.
+16:51:32.062054 SCTP.ttcn:43 SCTPasp Test Port (SCTP_PCO): Calling user_map(SCTP_PCO).
+16:51:32.062088 SCTP.ttcn:43 SCTPasp Test Port (SCTP_PCO): Running in CLIENT MODE.
+16:51:32.062117 SCTP.ttcn:43 SCTPasp Test Port (SCTP_PCO): Leaving user_map().
+16:51:32.062144 SCTP.ttcn:43 Port SCTP_PCO was mapped to system:SCTP_PCO.
+16:51:32.062223 SCTP.ttcn:43 Map operation of mtc:SCTP_PCO to system:SCTP_PCO finished.
+16:51:32.062271 SCTP.ttcn:52 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP_Connect : { peer_hostname := omit, peer_portnumber := omit }
+16:51:32.062306 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP_CONNECT).
+16:51:32.062334 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Creating SCTP socket.
+16:51:32.062377 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Setting SCTP socket options (initmsg).
+16:51:32.062407 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Setting SCTP socket options (events).
+16:51:32.062437 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Connecting to (127.0.0.1):(5202)
+16:51:32.062591 SCTP.ttcn:52 Message enqueued on SCTP_PCO from system @SCTPasp_Types.ASP_SCTP_RESULT : { client_id := 6, error_status := false, error_message := omit } id 1
+16:51:32.062640 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Connection successfully established to (127.0.0.1):(5202)
+16:51:32.062674 SCTP.ttcn:52 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP_CONNECT).
+16:51:32.062701 SCTP.ttcn:53 Start timer t0: 1 s
+16:51:32.062743 SCTP.ttcn:56 Matching on port SCTP_PCO succeeded:  matched
+16:51:32.062785 SCTP.ttcn:56 Receive operation on port SCTP_PCO succeeded, message from system(): @SCTPasp_Types.ASP_SCTP_RESULT : { client_id := 6, error_status := false, error_message := omit } id 1
+16:51:32.062815 SCTP.ttcn:56 Message with id 1 was extracted from the queue of SCTP_PCO.
+16:51:32.062867 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3020203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("0  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.062898 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.062935 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063024 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063073 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3120203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("1  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063104 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063133 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063194 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063241 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3220203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("2  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063300 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063331 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063363 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063409 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3320203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("3  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063440 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063470 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063502 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063545 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3420203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("4  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063574 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063603 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063633 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063675 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3520203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("5  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063706 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063734 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063765 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063807 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3620203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("6  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063835 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063862 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.063893 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.063934 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3720203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("7  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.063962 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.063991 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.064022 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.064062 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3820203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("8  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.064090 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.064117 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.064148 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.064214 SCTP.ttcn:64 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '3920203A41414242434344454546464747484849494A4A4B4B4C4C4D4D4E4E4F4F5050515152525353545456565757585859595A5A0A0D'O ("9  :AABBCCDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTVVWWXXYYZZ\n\r") }
+16:51:32.064245 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.064273 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.064305 SCTP.ttcn:64 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.064343 SCTP.ttcn:67 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '436C69656E742077616974696E6720666F722031207365636F6E640A0D'O ("Client waiting for 1 second\n\r") }
+16:51:32.064372 SCTP.ttcn:67 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:32.064401 SCTP.ttcn:67 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:32.064468 SCTP.ttcn:67 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:32.064497 SCTP.ttcn:69 Warning: Re-starting timer t0, which is already active (running or expired).
+16:51:32.064525 SCTP.ttcn:69 Start timer t0: 1 s
+16:51:33.064616 SCTP.ttcn:70 Timeout t0: 1 s
+16:51:33.064836 SCTP.ttcn:72 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP : { client_id := omit, sinfo_stream := 0, sinfo_ppid := 0, data := '436C69656E742073656E64696E6720636C6F73650A0D'O ("Client sending close\n\r") }
+16:51:33.064907 SCTP.ttcn:72 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP).
+16:51:33.064971 SCTP.ttcn:72 SCTPasp Test Port (SCTP_PCO): Sending SCTP message to file descriptor 6.
+16:51:33.065107 SCTP.ttcn:72 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP).
+16:51:33.065196 SCTP.ttcn:75 Sent on SCTP_PCO to system @SCTPasp_Types.ASP_SCTP_Close : { client_id := omit }
+16:51:33.065272 SCTP.ttcn:75 SCTPasp Test Port (SCTP_PCO): Calling outgoing_send (ASP_SCTP_CLOSE).
+16:51:33.065376 SCTP.ttcn:75 SCTPasp Test Port (SCTP_PCO): CLIENT MODE: closing socket (fd = 6).
+16:51:33.065522 SCTP.ttcn:75 SCTPasp Test Port (SCTP_PCO): Leaving outgoing_send (ASP_SCTP_CLOSE).
+16:51:33.065595 SCTP.ttcn:76 Start timer t0: 1 s
+16:51:34.065726 SCTP.ttcn:80 Timeout t0: 1 s
+16:51:34.065902 SCTP.ttcn:84 Unmapping port mtc:SCTP_PCO from system:SCTP_PCO.
+16:51:34.066214 SCTP.ttcn:84 SCTPasp Test Port (SCTP_PCO): Calling user_unmap(SCTP_PCO).
+16:51:34.066328 SCTP.ttcn:84 SCTPasp Test Port (SCTP_PCO): Leaving user_unmap().
+16:51:34.066385 SCTP.ttcn:84 Port SCTP_PCO was unmapped from system:SCTP_PCO.
+16:51:34.066641 SCTP.ttcn:84 Unmap operation of mtc:SCTP_PCO from system:SCTP_PCO finished.
+16:51:34.066756 SCTP.ttcn:86 There are no alive PTCs. Operation 'all component.kill' had no effect.
+16:51:34.066814 SCTP.ttcn:86 Terminating component type SCTP.SCTP_CT.
+16:51:34.066871 SCTP.ttcn:86 SCTPasp Test Port (SCTP_PCO): Calling user_stop().
+16:51:34.066923 SCTP.ttcn:86 SCTPasp Test Port (SCTP_PCO): Leaving user_stop().
+16:51:34.066974 SCTP.ttcn:86 Port SCTP_PCO was stopped.
+16:51:34.067028 SCTP.ttcn:86 Component type SCTP.SCTP_CT was shut down inside testcase tc_sctp0.
+16:51:34.067082 SCTP.ttcn:86 Waiting for PTCs to finish.
+16:51:34.067328 SCTP.ttcn:86 Setting final verdict of the test case.
+16:51:34.067461 SCTP.ttcn:86 Local verdict of MTC: none
+16:51:34.067522 SCTP.ttcn:86 No PTCs were created.
+16:51:34.067574 SCTP.ttcn:86 Test case tc_sctp0 finished. Verdict: none
+16:51:34.067633 SCTP.ttcn:94 Execution of control part in module SCTP finished.
+16:51:34.068384 - Verdict statistics: 1 none (100.00 %), 0 pass (0.00 %), 0 inconc (0.00 %), 0 fail (0.00 %), 0 error (0.00 %).
+16:51:34.068599 - Test execution summary: 1 test case was executed. Overall verdict: none
+16:51:34.068653 - Exit was requested from MC. Terminating MTC.
